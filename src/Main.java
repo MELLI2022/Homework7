@@ -38,27 +38,19 @@ public class Main {
         }
         System.out.println("Задание 2.2");
         int earning = 15000;//заработок
-        int month1 = 6;
+        int month1 = 0;
         while (earning <= 12000000){
             earning = earning + (earning* 7) / 100;
-            earning = earning + (earning* 7) / 100;
-            earning = earning + (earning* 7) / 100;
-            earning = earning + (earning* 7) / 100;
-            earning = earning + (earning* 7) / 100;
-            earning = earning + (earning* 7) / 100;
-            System.out.println("Месяц " + month1 + ", накопления состовляют " + earning);month1 += 6;
+            month1 ++;
+                if (month1%6 == 0)
+            System.out.println("Месяц " + month1 + ", накопления состовляют " + earning);
         }
         System.out.println("Задание 2.3 ");
         int earnings1 = 15000;//заработок
-        int month3 = 6;
-        while (month3 <= 108) {
+       for (int month3 = 1;month3 <= 9*12;month3 ++) {
         earnings1 = earnings1 + (earnings1* 7) / 100;
-        earnings1 = earnings1 + (earnings1* 7) / 100;
-        earnings1 = earnings1 + (earnings1* 7) / 100;
-        earnings1 = earnings1 + (earnings1* 7) / 100;
-        earnings1 = earnings1 + (earnings1* 7) / 100;
-        earnings1 = earnings1 + (earnings1* 7) / 100;
-            System.out.println("Месяц " + month3+ ", накопления состовляют " + earnings1);month3 += 6;
+            if (month3%6 == 0)
+                System.out.println("Месяц " + month3+ ", накопления состовляют " + earnings1);
         }
         System.out.println("Задание 2.4 ");
         for (int c = 5; c <= 31; c += 7) {
@@ -66,11 +58,10 @@ public class Main {
         }
         System.out.println("Задание 3.1");
         System.out.println("Траектория движения кометы:");
-        for (int a = 0; a < 2122; a = a + 79) {
-             if (a > 2022-200)
-            System.out.println("Год движения кометы равен " + a);
+        for (int a = 0; a < 2022+100; a = a + 79) {
+            if (a > 2022 - 200)
+                System.out.println("Год движения кометы равен " + a);
         }
-
         System.out.println("Задание 3.2");
         for (int w = 1; w <= 10; w++) {
             System.out.println("2*" + w + "=" + 2 * w);
